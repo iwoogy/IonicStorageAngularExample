@@ -30,8 +30,8 @@ export class IonicStorageManagerService {
     this.localStorage?.set(key, value);
   }
 
-  public get(key: string) {
-    this.localStorage?.get(key);
+  public get(key: string): Promise<string> {
+    return this.localStorage?.get(key);
   }
 
   //------------------------ end of methods -----------------
